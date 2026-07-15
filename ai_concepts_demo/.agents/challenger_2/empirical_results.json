@@ -1,0 +1,52 @@
+{
+  "step1_valid": true,
+  "step1_notebook_count": 14,
+  "step1_errors": [],
+  "step2_valid": true,
+  "step2_failures": [],
+  "step3_results": [
+    [
+      "Normal project state",
+      true,
+      0
+    ],
+    [
+      "Extra non-ipynb files in topic dir",
+      true,
+      0
+    ],
+    [
+      "Extra top-level directory/file",
+      true,
+      0
+    ],
+    [
+      "Missing required directory",
+      true,
+      1
+    ],
+    [
+      "Directory path is a file",
+      true,
+      1
+    ],
+    [
+      "Directory with 0 .ipynb files",
+      true,
+      1
+    ],
+    [
+      "Corrupt JSON notebook",
+      true,
+      1
+    ],
+    [
+      "Array root JSON notebook",
+      true,
+      1
+    ]
+  ],
+  "step4_passed": false,
+  "step4_stdout": "",
+  "step4_stderr": "test_topic_directories_exist (test_e2e.TestTier1DirectoryScaffolding.test_topic_directories_exist) ... ok\ntest_notebooks_exist_and_valid_json (test_e2e.TestTier2NotebookValidity.test_notebooks_exist_and_valid_json) ... ok\ntest_notebook_content_structure (test_e2e.TestTier3NotebookContentVerification.test_notebook_content_structure) ... \n  test_notebook_content_structure (test_e2e.TestTier3NotebookContentVerification.test_notebook_content_structure) (notebook='rag_mastery.ipynb') ... FAIL\n  test_notebook_content_structure (test_e2e.TestTier3NotebookContentVerification.test_notebook_content_structure) (notebook='llm_api.ipynb') ... FAIL\n  test_notebook_content_structure (test_e2e.TestTier3NotebookContentVerification.test_notebook_content_structure) (notebook='prompt_engineering.ipynb') ... FAIL\n  test_notebook_content_structure (test_e2e.TestTier3NotebookContentVerification.test_notebook_content_structure) (notebook='agents.ipynb') ... FAIL\n  test_notebook_content_structure (test_e2e.TestTier3NotebookContentVerification.test_notebook_content_structure) (notebook='risk_evaluation.ipynb') ... FAIL\n  test_notebook_content_structure (test_e2e.TestTier3NotebookContentVerification.test_notebook_content_structure) (notebook='german_language.ipynb') ... FAIL\n  test_notebook_content_structure (test_e2e.TestTier3NotebookContentVerification.test_notebook_content_structure) (notebook='legal_walkthrough.ipynb') ... FAIL\ntest_verify_project_execution (test_e2e.TestTier4ScaffoldingVerifier.test_verify_project_execution) ... ok\n\n======================================================================\nFAIL: test_notebook_content_structure (test_e2e.TestTier3NotebookContentVerification.test_notebook_content_structure) (notebook='rag_mastery.ipynb')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/Users/kartavyadikshit/teamwork_projects/ai_concepts_demo/tests/test_e2e.py\", line 130, in test_notebook_content_structure\n    self.assertTrue(\n    ~~~~~~~~~~~~~~~^\n        has_code,\n        ^^^^^^^^^\n        f\"Notebook '{nb_path.relative_to(PROJECT_ROOT)}' does not contain any executable python code cells.\",\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\nAssertionError: False is not true : Notebook '1_RAG_Mastery/rag_mastery.ipynb' does not contain any executable python code cells.\n\n======================================================================\nFAIL: test_notebook_content_structure (test_e2e.TestTier3NotebookContentVerification.test_notebook_content_structure) (notebook='llm_api.ipynb')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/Users/kartavyadikshit/teamwork_projects/ai_concepts_demo/tests/test_e2e.py\", line 130, in test_notebook_content_structure\n    self.assertTrue(\n    ~~~~~~~~~~~~~~~^\n        has_code,\n        ^^^^^^^^^\n        f\"Notebook '{nb_path.relative_to(PROJECT_ROOT)}' does not contain any executable python code cells.\",\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\nAssertionError: False is not true : Notebook '2_LLM_API/llm_api.ipynb' does not contain any executable python code cells.\n\n======================================================================\nFAIL: test_notebook_content_structure (test_e2e.TestTier3NotebookContentVerification.test_notebook_content_structure) (notebook='prompt_engineering.ipynb')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/Users/kartavyadikshit/teamwork_projects/ai_concepts_demo/tests/test_e2e.py\", line 130, in test_notebook_content_structure\n    self.assertTrue(\n    ~~~~~~~~~~~~~~~^\n        has_code,\n        ^^^^^^^^^\n        f\"Notebook '{nb_path.relative_to(PROJECT_ROOT)}' does not contain any executable python code cells.\",\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\nAssertionError: False is not true : Notebook '3_Prompt_Engineering/prompt_engineering.ipynb' does not contain any executable python code cells.\n\n======================================================================\nFAIL: test_notebook_content_structure (test_e2e.TestTier3NotebookContentVerification.test_notebook_content_structure) (notebook='agents.ipynb')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/Users/kartavyadikshit/teamwork_projects/ai_concepts_demo/tests/test_e2e.py\", line 130, in test_notebook_content_structure\n    self.assertTrue(\n    ~~~~~~~~~~~~~~~^\n        has_code,\n        ^^^^^^^^^\n        f\"Notebook '{nb_path.relative_to(PROJECT_ROOT)}' does not contain any executable python code cells.\",\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\nAssertionError: False is not true : Notebook '4_Agents/agents.ipynb' does not contain any executable python code cells.\n\n======================================================================\nFAIL: test_notebook_content_structure (test_e2e.TestTier3NotebookContentVerification.test_notebook_content_structure) (notebook='risk_evaluation.ipynb')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/Users/kartavyadikshit/teamwork_projects/ai_concepts_demo/tests/test_e2e.py\", line 130, in test_notebook_content_structure\n    self.assertTrue(\n    ~~~~~~~~~~~~~~~^\n        has_code,\n        ^^^^^^^^^\n        f\"Notebook '{nb_path.relative_to(PROJECT_ROOT)}' does not contain any executable python code cells.\",\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\nAssertionError: False is not true : Notebook '5_Risk_Evaluation/risk_evaluation.ipynb' does not contain any executable python code cells.\n\n======================================================================\nFAIL: test_notebook_content_structure (test_e2e.TestTier3NotebookContentVerification.test_notebook_content_structure) (notebook='german_language.ipynb')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/Users/kartavyadikshit/teamwork_projects/ai_concepts_demo/tests/test_e2e.py\", line 130, in test_notebook_content_structure\n    self.assertTrue(\n    ~~~~~~~~~~~~~~~^\n        has_code,\n        ^^^^^^^^^\n        f\"Notebook '{nb_path.relative_to(PROJECT_ROOT)}' does not contain any executable python code cells.\",\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\nAssertionError: False is not true : Notebook '6_German_Language/german_language.ipynb' does not contain any executable python code cells.\n\n======================================================================\nFAIL: test_notebook_content_structure (test_e2e.TestTier3NotebookContentVerification.test_notebook_content_structure) (notebook='legal_walkthrough.ipynb')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/Users/kartavyadikshit/teamwork_projects/ai_concepts_demo/tests/test_e2e.py\", line 130, in test_notebook_content_structure\n    self.assertTrue(\n    ~~~~~~~~~~~~~~~^\n        has_code,\n        ^^^^^^^^^\n        f\"Notebook '{nb_path.relative_to(PROJECT_ROOT)}' does not contain any executable python code cells.\",\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\nAssertionError: False is not true : Notebook '7_Legal_Walkthrough/legal_walkthrough.ipynb' does not contain any executable python code cells.\n\n----------------------------------------------------------------------\nRan 4 tests in 0.023s\n\nFAILED (failures=7)\n"
+}
